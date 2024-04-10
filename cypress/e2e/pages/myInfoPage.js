@@ -21,15 +21,12 @@ class myInfoPage {
         this.elements.inputLastName().should('be.visible').clear().type(option)
     }
     writeEmployeeId(option){
-        this.elements.inputEmployeeId().should('be.visible').clear().type(option)
+        this.elements.inputEmployeeId().eq(3).should('be.visible').clear().type(option)
     }
     writeOtherId(option){
-        this.elements.inputOtherId().should('be.visible').clear().type(option)
+        this.elements.inputOtherId().eq(4).should('be.visible').clear().type(option)
     }
-
-    writeInputX(option){
-        this.elements.inputX().eq(3).should('be.visible').clear().type(option)
-    }
+    
 
 }
 
