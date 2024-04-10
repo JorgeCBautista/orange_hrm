@@ -1,7 +1,7 @@
 Feature: Orange My Info
     I want to see My Info and Update
 
-  @focus
+  @regression
   Scenario: Update My Info
     Given I open Orange page
     When I write "Admin" and "admin123"

@@ -20,8 +20,3 @@ When('I write employer info {string} and {string}', (employeeid,otherid) => {
         myInfoPage.writeEmployeeId(employeeid)
         myInfoPage.writeOtherId(otherid)
     })
-
-    When('I write employer info {string}', (employeeid) => {
-        myInfoPage.writeInputX(employeeid)
-    
-    })
