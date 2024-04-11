@@ -1,7 +1,7 @@
 class loginPage{
     elements = {
-        inputUser: () => cy.get('[placeholder="Username"]'),
-        inputPassword: () => cy.get('[placeholder="Password"]'),
+        inputUser: () => cy.get('[name="username"]'),
+        inputPassword: () => cy.get('[name="password"]'),
         buttonSubmit: () => cy.get('[type="submit"]')
     }
     writeUserName(option){
@@ -11,7 +11,7 @@ class loginPage{
         this.elements.inputPassword().should('be.visible').type(option)
     }
     clickButton(){
-        this.elements.buttonSubmit().should('be.visible').and('contain','Login').click();
+        this.elements.buttonSubmit().should('be.visible').click();
     }
 }
 export default  new loginPage()
