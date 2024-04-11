@@ -2,54 +2,45 @@ import { When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import myInfoPage from "../pages/myInfoPage";
 
 When("I click on the nav Menu My Info", () => {
-    myInfoPage.clickSpanMyInfo();
+  myInfoPage.clickSpanMyInfo();
 });
-
-And("I write full name {string} and {string} and {string}",
-    (firstname, middlename, lastname) => {
-    myInfoPage.writeFirstName(firstname);
-    myInfoPage.writeMiddleName(middlename);
-    myInfoPage.writeLastName(lastname);
-  }
-);
-And("I enter data information of the client",
-    (Datatable) => {
-      Datatable.hashes().forEach((row)=>{
-      //| firstname | secondname | lastname |
-        myInfoPage.writeFirstName(row.firstname);
-        myInfoPage.writeMiddleName(row.secondname);
-        myInfoPage.writeLastName(row.lastname);
-      })
-  }
-);
-
-And("I write employer info {string} and {string}", (employeeid, otherid) => {
-    myInfoPage.writeEmployeeId(employeeid);
-    myInfoPage.writeOtherId(otherid);
+And("I write the data information of the client", (Datatable) => {
+  Datatable.hashes().forEach((row) => {
+    myInfoPage.writeFirstName(row.firstname);
+    myInfoPage.writeMiddleName(row.middlename);
+    myInfoPage.writeLastName(row.lastname);
+  });
 });
-
-And("I write License drive {string} and  select {string}",
-    (drivelicnumber, selecexpirelicdate) => {
-    myInfoPage.writeDriveLicNumber(drivelicnumber);
-    myInfoPage.selectExpireLicDate(selecexpirelicdate);
-  }
-);
-And("I select nationality {string} and marital status {string}",
-    (inputelectnationality, inputelectmaritalstatus) => {
-    myInfoPage.comboInputElectNationality(inputelectnationality);
-    myInfoPage.comboInputElectMaritalStatus(inputelectmaritalstatus);
-  }
-);
-And("I select {string} and check Female", (dateofbirth) => {
-    myInfoPage.selecDateOfBirth(dateofbirth);
-    myInfoPage.radioGenderFemale();
-  }
-);
-And("I select bloodtype {string} and write testfield {string}", (bloodtype,testfield) => {
-  myInfoPage.comboInputBloodType(bloodtype);
-  myInfoPage.writeTestField(testfield);
-}
-);
+And("I write employer information", (Datatable) => {
+  Datatable.hashes().forEach((row) => {
+    myInfoPage.writeEmployeeId(row.employeid);
+    myInfoPage.writeOtherId(row.otherid);
+  });
+});
+And(
+  "I write the driver's license identifier and select when it expires",
+  (Datatable) => {
+    Datatable.hashes().forEach((row) => {
+      myInfoPage.writeDriveLicNumber(row.licensedrive);
+      myInfoPage.selectExpireLicDate(row.expirelicense);
+  });
+});
+And("I select nationality , marital status and date of birth", (Datatable) => {
+  Datatable.hashes().forEach((row) => {
+    myInfoPage.comboInputElectNationality(row.nationality);
+    myInfoPage.comboInputElectMaritalStatus(row.marital);
+    myInfoPage.selecDateOfBirth(row.dateofbirth);
+  });
+});
+And("Choose gender", () => {
+  myInfoPage.radioGenderFemale();
+});
+And("I select bloodtype and write testfield", (Datatable) => {
+  Datatable.hashes().forEach((row) => {
+    myInfoPage.comboInputBloodType(row.bloodtype);
+    myInfoPage.writeTestField(row.testfield);
+  });
+});
 And("I click on the button Attachment", () => {
   myInfoPage.clickAttachmentButton();
 });
