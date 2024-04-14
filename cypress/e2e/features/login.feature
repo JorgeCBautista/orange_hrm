@@ -4,5 +4,7 @@ Feature: Orange Main Page
   @focus
   Scenario: Opening a search Orange page
     Given I open Orange page
-    When I write "Admin" and "admin123"
+    When I write username and password
+      | username | password |
+      | Admin |  admin123 |
     Then I click on the button

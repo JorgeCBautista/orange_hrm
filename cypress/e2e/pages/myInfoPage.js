@@ -16,7 +16,7 @@ class myInfoPage {
         inputTestField: () =>cy.get('.oxd-input.oxd-input--active'),
         buttonAttachment: () => cy.get('.oxd-button.oxd-button--medium.oxd-button--text'),
         buttonBrowse: () => cy.get('.oxd-file-input'),
-        buttonSave:() => cy.get('.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space')
+        buttonSave:() => cy.get('[type="submit"]')
     }
 
     clickSpanMyInfo() {
@@ -76,7 +76,7 @@ class myInfoPage {
         this.elements.buttonBrowse().click({force: true}).selectFile("cypress/fixtures/test123cty.pdf", {force: true});
     }
     clickButtonSave(){
-        this.elements.buttonSave().eq(2).should('be.visible').and('contain','Save').click();
+        this.elements.buttonSave().eq(1).should('be.visible').click();
     }   
 }
 export default new myInfoPage();
