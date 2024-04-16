@@ -4,14 +4,14 @@ class myInfoPage {
         inputFirstName: () =>cy.get('[name="firstName"]'),
         inputMiddleName: () =>cy.get('[name="middleName"]'),
         inputLastName: () =>cy.get('[name="lastName"]'),
-        inputOtherId: () =>cy.get('.oxd-input.oxd-input--active'),
-        inputEmployeeId: ()=>cy.get('.oxd-input.oxd-input--active'),
-        driveLicNumber : () =>cy.get('.oxd-input.oxd-input--active'),
-        inputExpireLicDate: () =>cy.get('.oxd-input.oxd-input--active'),
+        inputEmployeeId: ()=>cy.get('.oxd-grid-item.oxd-grid-item--gutters .oxd-input.oxd-input--active'),
+        inputOtherId: () =>cy.get('.oxd-grid-item.oxd-grid-item--gutters .oxd-input.oxd-input--active'),
+        driveLicNumber : () =>cy.get('.oxd-grid-item.oxd-grid-item--gutters .oxd-input.oxd-input--active'),
+        inputExpireLicDate: () =>cy.get('.oxd-date-input .oxd-input.oxd-input--active'),
         inputElectNationality: ()=>cy.get('.oxd-select-text-input'),
         inputElectMaritalStatus: ()=>cy.get('.oxd-select-text-input'),
-        inputDateofBirth: () =>cy.get('.oxd-input.oxd-input--active'),
-        radioFemale: ()=>cy.get('input[type="radio"][value="2"]'),
+        inputDateofBirth: () =>cy.get('.oxd-date-input .oxd-input.oxd-input--active'),
+        radioFemale: ()=>cy.get('[type="radio"]'),
         inputBloodType: ()=>cy.get('.oxd-select-text-input'),
         inputTestField: () =>cy.get('.oxd-input.oxd-input--active'),
         buttonAttachment: () => cy.get('.oxd-button.oxd-button--medium.oxd-button--text'),
@@ -33,16 +33,16 @@ class myInfoPage {
     }
 
     writeEmployeeId(option){
-        this.elements.inputEmployeeId().eq(3).should('be.visible').clear().type(option)
+        this.elements.inputEmployeeId().eq(2).should('be.visible').clear().type(option)
     }
     writeOtherId(option){
-        this.elements.inputOtherId().eq(4).should('be.visible').clear().type(option)
+        this.elements.inputOtherId().eq(3).should('be.visible').clear().type(option)
     }
     writeDriveLicNumber(option){
-        this.elements.driveLicNumber().eq(5).should('be.visible').clear().type(option)
+        this.elements.driveLicNumber().eq(4).should('be.visible').clear().type(option)
     }
     selectExpireLicDate(date){
-        this.elements.inputExpireLicDate().eq(7).clear().type(date).click()
+        this.elements.inputExpireLicDate().eq(0).clear().type(date).click()
     }
     comboInputElectNationality(option){
         this.elements.inputElectNationality().eq(0).click().then(() => {
@@ -55,10 +55,10 @@ class myInfoPage {
         });     
     }
     selecDateOfBirth(date){
-        this.elements.inputDateofBirth().eq(8).clear().type(date).click();
+        this.elements.inputDateofBirth().eq(1).clear().type(date).click()
     }
     radioGenderFemale(){
-        this.elements.radioFemale().click({force: true});
+        this.elements.radioFemale().eq(1).click({force: true});
     }
     comboInputBloodType(option){
         this.elements.inputBloodType().eq(2).click().then(() => {
@@ -76,7 +76,7 @@ class myInfoPage {
         this.elements.buttonBrowse().click({force: true}).selectFile("cypress/fixtures/test123cty.pdf", {force: true});
     }
     clickButtonSave(){
-        this.elements.buttonSave().eq(1).should('be.visible').click();
+        this.elements.buttonSave().eq(2).should('be.visible').wait(1000).click({force: true});
     }   
 }
 export default new myInfoPage();
