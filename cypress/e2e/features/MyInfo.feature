@@ -3,11 +3,12 @@ Feature: Orange My Info
 
   @regression
   Scenario: Opening a search Orange page
-    Given I open Orange page
+    Given I open Login orange HRM page
     When I write username and password
       | username | password |
       | Admin    | admin123 |
-    Then I click on the button
+    And I click on the button
+    Then I should be redirected to orange dashboard page
     When I click on the nav Menu My Info
     And I write the data information of the client
       | firstname | middlename | lastname |
