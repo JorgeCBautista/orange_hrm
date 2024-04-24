@@ -77,6 +77,6 @@ class myInfoPage {
     }
     clickButtonSave(){
         this.elements.buttonSave().eq(2).should('be.visible').wait(1000).click({force: true});
-    }   
+    }  
 }
 export default new myInfoPage();
