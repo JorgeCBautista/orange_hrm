@@ -1,5 +1,5 @@
 import { When, And, Then } from "cypress-cucumber-preprocessor/steps";
-import myInfoPage from "../pages/myInfoPage";
+import myInfoPage from "../../pages/dashboard/personal-details-page";
 
 When("I click on the nav Menu My Info", () => {
   myInfoPage.clickSpanMyInfo();
