@@ -1,0 +1,274 @@
+[
+  {
+    "description": "    I want to see My Info and Update",
+    "keyword": "Feature",
+    "name": "Orange My Info",
+    "line": 1,
+    "id": "orange-my-info",
+    "tags": [],
+    "uri": "MyInfo.feature",
+    "elements": [
+      {
+        "id": "orange-my-info;update-my-personal-details-from-myinfo",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Update my personal details from MyInfo",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open Login orange HRM page",
+            "result": {
+              "status": "passed",
+              "duration": 2623000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Admin",
+                      "admin123"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I write username and password",
+            "result": {
+              "status": "passed",
+              "duration": 1064000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on the button",
+            "result": {
+              "status": "passed",
+              "duration": 1237000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should be redirected to orange dashboard page",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I click on the nav Menu My Info",
+            "result": {
+              "status": "passed",
+              "duration": 2456000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "firstname",
+                      "middlename",
+                      "lastname"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Jorge",
+                      "Cuadros",
+                      "Bautista"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I write the data information of the client",
+            "result": {
+              "status": "passed",
+              "duration": 3058000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "employeid",
+                      "otherid"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Jorge2494",
+                      "249424"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I write employer information",
+            "result": {
+              "status": "passed",
+              "duration": 788000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "licensedrive",
+                      "expirelicense"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "12A12B12C12C12D",
+                      "2024-11-11"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I write the driver's license identifier and select when it expires",
+            "result": {
+              "status": "passed",
+              "duration": 1081000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "nationality",
+                      "marital",
+                      "dateofbirth"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "American",
+                      "Married",
+                      "1999-12-10"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I select nationality , marital status and date of birth",
+            "result": {
+              "status": "passed",
+              "duration": 1168000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "Choose gender",
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "bloodtype",
+                      "testfield"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "B-",
+                      "777"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I select bloodtype and write testfield",
+            "result": {
+              "status": "passed",
+              "duration": 796000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I click on the button Attachment",
+            "result": {
+              "status": "passed",
+              "duration": 164000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I click on the button Browse to find png",
+            "result": {
+              "status": "passed",
+              "duration": 453000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I click on the button Save and update png",
+            "result": {
+              "status": "passed",
+              "duration": 1674000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

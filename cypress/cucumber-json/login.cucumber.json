@@ -1,0 +1,145 @@
+[
+  {
+    "description": "    I want to open a Orange page",
+    "keyword": "Feature",
+    "name": "Orange Main Page Login",
+    "line": 1,
+    "id": "orange-main-page-login",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "orange-main-page-login;login-successful",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Login successful",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open Login orange HRM page",
+            "result": {
+              "status": "passed",
+              "duration": 3659000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Admin",
+                      "admin123"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I write username and password",
+            "result": {
+              "status": "passed",
+              "duration": 1125000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on the button",
+            "result": {
+              "status": "passed",
+              "duration": 1527000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should be redirected to orange dashboard page",
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "orange-main-page-login;login-unsuccessful",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Login unsuccessful",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I open Login orange HRM page",
+            "result": {
+              "status": "passed",
+              "duration": 1424000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "username",
+                      "password"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Acmind",
+                      "admin123"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Admin",
+                      ""
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "",
+                      "admin111"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "",
+                      ""
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I write invalid credentials and see error message",
+            "result": {
+              "status": "passed",
+              "duration": 6993000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
