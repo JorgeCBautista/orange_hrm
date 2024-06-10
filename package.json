@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:execution-tags": "cypress run --browser chrome --headless --env tags=@regression"
+    "cypress:execution-tags": "cypress run --browser chrome --headless --env tags=@regression",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+
   },
   "author": "",
   "license": "ISC",
