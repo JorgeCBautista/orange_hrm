@@ -2,7 +2,7 @@ Feature: Orange My Info
     I want to see My Info and Update
 
   @regression
-  Scenario: Opening a search Orange page
+  Scenario: Update my personal details from MyInfo
     Given I open Login orange HRM page
     When I write username and password
       | username | password |
